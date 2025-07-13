@@ -471,7 +471,8 @@
           </div>
         </div>
         <div class="col-md-5">
-          <form>
+          <form data-netlify="true" onsubmit="handleSubmit(event)">
+            <input type="hidden" name="form-name" value="Contact Form" />
             <div class="mb-3">
               <input type="text" class="form-control p-3 rounded-4" name="name" id="name" 
                 placeholder="Your Name" required />
@@ -571,6 +572,21 @@
   <script type="text/javascript" src="js/lightbox.min.js"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="js/script.js"></script>
+  <div id="confirmation-message" style="display:none;" class="alert alert-success mt-3">Your response has been submitted successfully!</div>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission
+    const form = event.target;
+    const confirmationMessage = document.getElementById('confirmation-message');
+
+    // Show confirmation message
+    confirmationMessage.style.display = 'block';
+
+    // Optionally, you can reset the form after submission
+    form.reset();
+}
+</script>
 </body>
 
 </html>
