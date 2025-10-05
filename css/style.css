@@ -247,3 +247,196 @@ a:hover {
     background-color: var(--bs-pagination-active-bg);
     border-color: var(--bs-pagination-active-border-color);
 }
+
+/* ==========================================================
+   📱 MOBILE RESPONSIVE DESIGN (Phones ≤768px)
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  /* --- General Page Layout --- */
+  html, body {
+    overflow-x: hidden;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  section {
+    padding: 50px 15px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  /* --- Navbar --- */
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .offcanvas {
+    width: 80%;
+  }
+
+  /* --- Banner / Hero Section --- */
+  .banner {
+    text-align: center;
+    padding: 60px 15px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .banner h1,
+  .banner .display-1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .banner p {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+
+  .banner .btn {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  /* --- About Section --- */
+  #about .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .col-lg-4,
+  #about .col-md-6 {
+    margin-bottom: 25px;
+  }
+
+  #about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* --- Skills Section --- */
+  #skills .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #skills .icon {
+    margin-bottom: 10px;
+  }
+
+  #skills h5 {
+    font-size: 1.2rem;
+  }
+
+  #skills p {
+    font-size: 0.95rem;
+  }
+
+  /* --- Portfolio Section --- */
+  #portfolio .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  #portfolio img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  #portfolio .section-header h2 {
+    font-size: 2rem;
+  }
+
+  #portfolio .section-header h4 {
+    font-size: 1rem;
+  }
+
+  /* --- Testimonials Section --- */
+  .testimonial-card {
+    margin: 10px 0;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+  }
+
+  /* --- Contact Section --- */
+  #contact {
+    text-align: center;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  #contact p,
+  #contact a {
+    font-size: 0.95rem;
+    word-wrap: break-word;
+  }
+
+  #contact .col-md-5 {
+    margin-bottom: 25px;
+  }
+
+  /* --- Footer --- */
+  footer {
+    text-align: center;
+    padding: 40px 15px;
+  }
+
+  footer h5 {
+    font-size: 1rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.9rem;
+  }
+
+  footer .row > div {
+    margin-bottom: 20px;
+  }
+
+  /* --- Utility --- */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .text-center-sm {
+    text-align: center;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+}
