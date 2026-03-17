@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <title>Vansh Arora - Full Stack Developer</title>
@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="css/lightbox.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!--style sheet-->
   <link rel="stylesheet" href="css/style.css">
@@ -56,60 +59,16 @@
           <a class="nav-link" href="#portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#certificates">Certificates</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
+      <a href="#contact" class="btn btn-primary rounded-pill px-4 ms-lg-4 mt-3 mt-lg-0 fw-bold">Hire Me</a>
     </div>
   </div>
 </nav>
-
-  <header id="top" class="position-sticky top-0 start-0" style="z-index:10;">
-    <nav class="navbar bg-white fixed-top">
-      <div class="container-fluid">
-        <div class="d-flex align-items-center g-4">
-          <a class="navbar-brand d-flex" href="index.html">
-            <h1>VANSH ARORA</h1> 
-          </a>
-        </div>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <span class="navabar-toggler-icon">
-            <svg class="text-primary menu" width="32" height="32">
-              <use xlink:href="#menu"></use>
-            </svg>
-          </span>
-        </button>
-        <div class="offcanvas offcanvas-end text-white bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close btn-close-white ms-3" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav flex-grow-1 p-4">
-              <li class="nav-item">
-                <a class="nav-link active text-uppercase ls-4 text-white" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase ls-4 text-white" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase ls-4 text-white" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase ls-4 text-white" href="#portfolio">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase ls-4 text-white" href="#experience">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase ls-4 text-white" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
 
   <!-- Hero Section -->
   <section id="home">
@@ -118,7 +77,7 @@
         style="background-image: url(images/converted_keyboard_image.png); background-size: cover ; background-repeat: no-repeat; background-position: center;">
         <div class="text-content text-white py-5 my-5">
           <p class="fs-4">
-            Full Stack Developer
+            <span class="typed-text"></span>
           </p>
           <h1 class="display-1">
             Vansh <br> Arora
@@ -135,48 +94,7 @@
             </a>
           </div>
         </div>
-<div class="row text-uppercase bg-black rounded-4 p-4 mt-5">
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-lg-0">
-    <div class="d-flex align-items-center justify-content-center justify-content-lg-start h-100">
-      <h2 class="display-2 text-light mb-0 me-3 flex-shrink-0">
-        1+
-      </h2>
-      <p class="text-light mb-0 lh-sm fs-6">
-        Years of <br> experience
-      </p>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-lg-0">
-    <div class="d-flex align-items-center justify-content-center justify-content-lg-start h-100">
-      <h2 class="display-2 text-light mb-0 me-3 flex-shrink-0">
-        50+
-      </h2>
-      <p class="text-light mb-0 lh-sm fs-6">
-        Projects <br> completed
-      </p>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-lg-0">
-    <div class="d-flex align-items-center justify-content-center justify-content-lg-start h-100">
-      <h2 class="display-2 text-light mb-0 me-3 flex-shrink-0">
-        6+
-      </h2>
-      <p class="text-light mb-0 lh-sm fs-6">
-        Technologies <br> mastered
-      </p>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-3 mb-lg-0">
-    <div class="d-flex align-items-center justify-content-center justify-content-lg-start h-100">
-      <h2 class="display-2 text-light mb-0 me-3 flex-shrink-0">
-        100%
-      </h2>
-      <p class="text-light mb-0 lh-sm fs-6">
-        Client <br> satisfaction
-      </p>
-    </div>
-  </div>
-</div>
+
 
       </div>
     </div>
@@ -192,7 +110,7 @@
           <p class="lead text-white">Technologies and tools I work with to build innovative solutions</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="d-flex gap-4 align-items-start">
               <div class="icon">
                 <svg class="text-primary laptop" width="50" height="50">
@@ -200,14 +118,14 @@
                 </svg>
               </div>
               <div class="text-md-start">
-                <h5 class="text-white">Fullstack Web Development</h5>
+                <h5 class="text-white">Fullstack Web & Backend</h5>
                 <p class="text-white">
-                  React.js, JavaScript, HTML5, CSS3 , Bootstrap, Tailwind CSS, Component Architecture , Moongo DB, Express.js, RESTful APIs, Authentication Etc.
+                  React.js, Next.js, Node.js, Express.js, REST APIs, HTML/CSS, JavaScript, MongoDB, SQL, Tailwind CSS
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="d-flex gap-4 align-items-start">
               <div class="icon">
                 <svg class="text-primary monitor" width="50" height="50">
@@ -215,14 +133,14 @@
                 </svg>
               </div>
               <div class="text-md-start">
-                <h5 class="text-white">Python Development</h5>
+                <h5 class="text-white">AI & Data Science</h5>
                 <p class="text-white">
-                  Python, Data Analysis,LLM, Automation Scripts (Agentic Ai ), Generative AI Models
+                  Python, LSTM, Pandas, NumPy, Matplotlib, Time-Series Analysis, LLM
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="d-flex gap-4 align-items-start">
               <div class="icon">
                 <svg class="text-primary notes" width="50" height="50">
@@ -230,9 +148,9 @@
                 </svg>
               </div>
               <div class="text-md-start">
-                <h5 class="text-white">Design Systems</h5>
+                <h5 class="text-white">Design & Tools</h5>
                 <p class="text-white">
-                  Interactive UI Components, Search & Filter Systems, Responsive Design, Accessibility Best Practices Etc.
+                  UI/UX Design, Canva, Git, GitHub, AWS, C/C++
                 </p>
               </div>
             </div>
@@ -247,61 +165,66 @@
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="h-100 bg-yellow p-4 rounded-4">
             <h3>Education</h3>
             <div class="py-4">
               <p class="text-dark-emphasis">2023 - 2027</p>
-             <p class="text-dark-emphasis">Birla institute of Technology mesra </p>
-              <h5>Bachelor's in Computer Science and engineering</h5>
+              <p class="text-dark-emphasis mb-1">Birla Institute of Technology, Mesra</p>
+              <h5 class="mb-2">B.Tech in Computer Science and Engineering</h5>
               <p class="text-dark-emphasis">
-                Focused on software engineering, data structures, algorithms, and web development
+                CGPA: Pursuing
               </p>
             </div>
-            <p class="text-dark-emphasis">2023</p>
-            <h5>Class XII</h5>
+            <p class="text-dark-emphasis mb-1">2023</p>
+            <h5 class="mb-2">Senior Secondary (Class XII) - CBSE</h5>
+            <p class="text-dark-emphasis mb-4">
+              Percentage: 83.6%
+            </p>
+            <p class="text-dark-emphasis mb-1">2021</p>
+            <h5 class="mb-2">Secondary (Class X) - CBSE</h5>
             <p class="text-dark-emphasis">
-              Percentage:: 83.4%
+              Percentage: 92%
             </p>
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="h-100 bg-green p-4 rounded-4">
             <h3>Experience</h3>
             <div class="py-4">
-              <p class="text-dark-emphasis">May-July 2025</p>
-              <h5>Full Stack Developer-intern</h5>
-              <h5>Krikal Soft pvt.ltd</h5>
-              <p class="text-dark-emphasis">
-                Developed responsive web applications using React.js and Node.js. Collaborated with cross-functional teams.
-              </p>
+              <p class="text-dark-emphasis mb-1">May 2025 - July 2025</p>
+              <h5 class="mb-2">Full Stack Web Developer Intern</h5>
+              <p class="fw-bold mb-2">Krikal Soft Pvt. Ltd.</p>
+              <ul class="text-dark-emphasis ps-3" style="font-size: 0.95rem;">
+                <li class="mb-2">Developed responsive and scalable user interfaces using React.js, Next.js, and Tailwind CSS.</li>
+                <li class="mb-2">Built and deployed a live corporate training platform (Learnitfy) with authentication, dashboards, and RESTful APIs.</li>
+                <li class="mb-2">Designed and implemented backend services using Node.js, Express.js, and MongoDB for data persistence.</li>
+                <li class="mb-2">Refactored legacy backend code to support 2x concurrent users without performance degradation.</li>
+                <li>Managed cloud deployment on AWS, ensuring secure and production-ready application delivery.</li>
+              </ul>
             </div>
-            <!-- <p class="text-dark-emphasis">2023 - Present</p>
-            <h5>Full Stack Developer</h5>
-            <p class="text-dark-emphasis">
-              Leading development of complex web applications, mentoring junior developers, and implementing best practices.
-            </p> -->
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="h-100 bg-teal p-4 rounded-4">
-            <h3>Interests</h3>
+            <h3>Positions of Responsibility</h3>
             <div class="py-4">
-              <h5>Open Source Contribution</h5>
-              <p class="text-dark-emphasis">
-                Active contributor to open source projects on GitHub, helping the developer community
-              </p>
+              <p class="text-dark-emphasis mb-1">Aug. 2025 - Aug. 2026</p>
+              <h5 class="mb-2">Web Development Lead | GDG, BIT Mesra</h5>
+              <ul class="text-dark-emphasis ps-3 mb-4" style="font-size: 0.95rem;">
+                <li class="mb-2">Oversaw GDG's 2025 Batch Introduction Program and coordinated events like Google Cloud Study Jam.</li>
+                <li>Led hands-on workshops such as Web Dev Days and Unlocking Web Development.</li>
+              </ul>
+              
+              <p class="text-dark-emphasis mb-1">Aug. 2024 - Aug. 2025</p>
+              <h5 class="mb-2">Web Development Lead | TechVerse, BIT Mesra</h5>
+              <ul class="text-dark-emphasis ps-3" style="font-size: 0.95rem;">
+                <li class="mb-2">Hosted a Web Development session and volunteered in an App Development session.</li>
+                <li>Supported team coordination, mentoring, and session moderation to improve engagement.</li>
+              </ul>
             </div>
-            <h5>Technology Innovation</h5>
-            <p class="text-dark-emphasis">
-              Passionate about emerging technologies like AI/ML, blockchain, and cloud computing
-            </p>
-            <h5>Problem Solving</h5>
-            <p class="text-dark-emphasis">
-              Enjoy tackling complex coding challenges and optimizing application performance
-            </p>
           </div>
         </div>
       </div>
@@ -330,42 +253,90 @@
 
         <div class="grid p-0 clearfix row row-cols-2 row-cols-lg-3 row-cols-xl-4" data-aos="fade-up">
 
-          <!-- 🆕 Learnitfy Project -->
+          <!-- Learnitfy Project -->
           <div class="col mb-4 portfolio-item web-app">
-            <a href="https://www.learnitfy.com/" target="_blank" title="Learnitfy - Corporate EdTech Platform">
-              <img src="https://www.learnitfy.com/static/media/PNG-01.8ee368613646ae2541d7.png" class="img-fluid rounded-4" alt="Learnitfy EdTech Platform">
+            <a href="https://www.learnitfy.com/" target="_blank" title="Learnitfy - Corporate EdTech Platform" class="text-decoration-none">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark hover-shadow">
+                <img src="images/learnitfy.png" class="card-img-top" alt="Learnitfy EdTech Platform" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title text-center mb-0 text-light">Learnitfy Platform</h5>
+                </div>
+              </div>
             </a>
           </div>
 
-          <!-- 🆕 India Private Chauffeur Project -->
+          <!-- India Private Chauffeur Project -->
           <div class="col mb-4 portfolio-item web-app">
-            <a href="https://indiaprivatechauffeur.com/" target="_blank" title="India Private Chauffeur - Travel & Chauffeur Service">
-             
-              <img src="https://indiaprivatechauffeur.com/images/slider/slideTwo.jpeg" class="img-fluid rounded-4" alt="India Private Chauffeur Website">
-               <h1>India Private Chauffeur</h1>
+            <a href="https://indiaprivatechauffeur.com/" target="_blank" title="India Private Chauffeur - Travel & Chauffeur Service" class="text-decoration-none">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark hover-shadow">
+                <img src="https://indiaprivatechauffeur.com/images/slider/slideTwo.jpeg" class="card-img-top" alt="India Private Chauffeur Website" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title text-center mb-0 text-light">India Private Chauffeur</h5>
+                </div>
+              </div>
             </a>
           </div>
 
+          <!-- Parallax Tech Fest -->
           <div class="col mb-4 portfolio-item web-app">
-            <a href="https://reseachrepositiory.framer.ai/" target="_blank" title="Research Repository - Framer AI Project">
-              <img src="https://framerusercontent.com/images/HU7HDELGVr5hsCIcmxFw5sluuCs.jpg?scale-down-to=512" class="img-fluid rounded-4" alt="India Private Chauffeur Website">
-                <H1>Research Repository</H1>
+            <a href="https://www.parallaxbitj.in/" target="_blank" title="Parallax Tech Fest Website" class="text-decoration-none">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark hover-shadow">
+                <img src="images/parallax.png" class="card-img-top" alt="Parallax Tech Fest" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title text-center mb-0 text-light">Parallax Tech Fest</h5>
+                </div>
+              </div>
             </a>
           </div>
 
-          <!-- Remaining Original Portfolio Items -->
-          <div class="col mb-4 portfolio-item mobile-app AI-ML">
-           <a href="https://vansharora21-gen-ai-urban-planning-project-streamlit-app-na0qyb.streamlit.app/" target="_blank" title="GEN AI Urban Planning - Streamlit App">
-              <img src="images/image.png" class="img-fluid rounded-4" alt="GEN AI Urban Planning">
-                <H1>GEN AI Urban Planning</H1>
+          <!-- Research Repository -->
+          <div class="col mb-4 portfolio-item web-app">
+            <a href="https://reseachrepositiory.framer.ai/" target="_blank" title="Research Repository - Framer AI Project" class="text-decoration-none">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark hover-shadow">
+                <img src="https://framerusercontent.com/images/HU7HDELGVr5hsCIcmxFw5sluuCs.jpg?scale-down-to=512" class="card-img-top" alt="Research Repository Website" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title text-center mb-0 text-light">Research Repository</h5>
+                </div>
+              </div>
             </a>
           </div>
-          <div class="col mb-4 portfolio-item mobile-app AI-ML">
-           <a href="https://github.com/vansharora21/drought_prediction_lstm" target="_blank" title="Drought Prediction LSTM - GitHub Project">
-              <img src="images/genai 1.png" class="img-fluid rounded-4" alt="Drought Prediction LSTM">
-                <H1>Drought Prediction LSTM</H1>
+
+          <!-- InsightAI Project -->
+          <div class="col mb-4 portfolio-item web-app AI-ML">
+            <a href="https://github.com/vansharora21/E-Commerce-Database-Performance-Analyzer-AGENT" target="_blank" title="InsightAI - Agentic E-Commerce Database Performance Analyzer" class="text-decoration-none">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark hover-shadow">
+                <img src="images/genai 1.png" class="card-img-top" alt="InsightAI Agentic Database Analyzer" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title text-center mb-0 text-light">InsightAI - Database Analyzer</h5>
+                </div>
+              </div>
             </a>
           </div>
+
+          <!-- Gen AI Urban Planning -->
+          <div class="col mb-4 portfolio-item AI-ML">
+            <a href="https://vansharora21-gen-ai-urban-planning-project-streamlit-app-na0qyb.streamlit.app/" target="_blank" title="GEN AI Urban Planning - Streamlit App" class="text-decoration-none">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark hover-shadow">
+                <img src="images/image.png" class="card-img-top" alt="GEN AI Urban Planning" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title text-center mb-0 text-light">GEN AI Urban Planning</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Drought Prediction LSTM -->
+          <div class="col mb-4 portfolio-item AI-ML">
+            <a href="https://github.com/vansharora21/drought_prediction_lstm" target="_blank" title="Drought Prediction LSTM - GitHub Project" class="text-decoration-none">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark hover-shadow">
+                <img src="images/genai 1.png" class="card-img-top" alt="Drought Prediction LSTM" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title text-center mb-0 text-light">Drought Prediction LSTM</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
 <!-- 
           <div class="col mb-4 portfolio-item api">
             <a href="images/project-4.jpg" data-lightbox="project-4" data-title="RESTful API Service" title="Scalable API service with comprehensive documentation">
@@ -392,6 +363,137 @@
     </div>
   </section>
 
+  <!-- Certificates Section -->
+  <section id="certificates" class="py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4">My Certificates</h2>
+        <p class="lead">Certifications and learning achievements that validate my technical skills.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Next.js -->
+        <div class="col" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/3naonbrwaim.png" class="card-img-top" alt="Next.js Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Next.js Development</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canva -->
+        <div class="col" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/canva.png" class="card-img-top" alt="Canva Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Canva Design</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- C/C++ -->
+        <div class="col" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/cc++.png" class="card-img-top" alt="C/C++ Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">C/C++ Programming</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chatbot -->
+        <div class="col" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/chatbot.png" class="card-img-top" alt="Chatbot Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Chatbot Development</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col" data-aos="fade-up" data-aos-delay="500">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/frontend.png" class="card-img-top" alt="Frontend Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Frontend Web Development</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Stack -->
+        <div class="col" data-aos="fade-up" data-aos-delay="600">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/full stack.png" class="card-img-top" alt="Full Stack Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Full Stack Web Development</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mastery in JS -->
+        <div class="col" data-aos="fade-up" data-aos-delay="700">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/mastery in js.png" class="card-img-top" alt="JavaScript Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Mastery in JavaScript</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matplotlib -->
+        <div class="col" data-aos="fade-up" data-aos-delay="800">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/matplotlib.png" class="card-img-top" alt="Matplotlib Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Matplotlib Library</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python PDF Lib -->
+        <div class="col" data-aos="fade-up" data-aos-delay="900">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/python pdf lib.png" class="card-img-top" alt="Python Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">Python Libraries</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- React -->
+        <div class="col" data-aos="fade-up" data-aos-delay="1000">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/react.png" class="card-img-top" alt="React Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">React.js Framework</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="col" data-aos="fade-up" data-aos-delay="1100">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/sql.png" class="card-img-top" alt="SQL Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">SQL Database Management</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="col" data-aos="fade-up" data-aos-delay="1200">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
+            <img src="images/certificates/ui ux.png" class="card-img-top" alt="UI/UX Certificate">
+            <div class="card-body">
+              <h5 class="card-title text-center mt-2">UI/UX Design</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Testimonials Section
   <section>
@@ -510,48 +612,60 @@
   </section> -->
 
   <!-- Contact Section -->
-  <section id="contact" class="p-5 bg-yellow py-5">
+  <section id="contact" class="p-5 bg-dark py-5">
     <div class="container">
       <div class="row justify-content-center my-5">
-        <div class="col-md-5">
-          <h6>Get In Touch</h6>
-          <h2 class="display-3">Let's Work Together</h2>
-          <p>
+        <div class="col-md-5 mb-5 mb-md-0" data-aos="fade-right">
+          <h6 class="text-primary text-uppercase fw-bold">Get In Touch</h6>
+          <h2 class="display-3 text-white fw-bold">Let's Work Together</h2>
+          <p class="text-light lead mb-4">
             Ready to bring your ideas to life? Let's discuss your project and create something amazing together.
           </p>
-          <div class="mt-4">
-            <p><strong>Email:</strong> vansharora4903@gmail.com</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/vansharora21" target="_blank">vansharora21</a></p>
-            <p ><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/aroravansh2108/" target="_blank"> <br>Connect with me on LinkedIn</a> </p>
+          <div class="d-flex flex-column gap-3 mt-4">
+            <a href="mailto:vansharora4903@gmail.com" class="btn btn-outline-light text-start p-3 rounded-pill d-flex align-items-center">
+              <span class="fs-5 me-3">📧</span> vansharora4903@gmail.com
+            </a>
+            <a href="https://github.com/vansharora21" target="_blank" class="btn btn-outline-light text-start p-3 rounded-pill d-flex align-items-center">
+              <span class="fs-5 me-3">💻</span> github.com/vansharora21
+            </a>
+            <a href="https://www.linkedin.com/in/vansharora2108/" target="_blank" class="btn btn-outline-light text-start p-3 rounded-pill d-flex align-items-center">
+              <span class="fs-5 me-3">💼</span> Connect on LinkedIn
+            </a>
           </div>
         </div>
-        <!-- <div class="col-md-5">
-          <form data-netlify="true" onsubmit="handleSubmit(event)">
-            <input type="hidden" name="form-name" value="Contact Form" />
-            <div class="mb-3">
-              <input type="text" class="form-control p-3 rounded-4" name="name" id="name" 
-                placeholder="Your Name" required />
+        <div class="col-md-6 offset-md-1" data-aos="fade-left">
+          <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)" class="bg-black p-4 p-md-5 rounded-4 shadow-lg border border-secondary border-opacity-25">
+            <input type="hidden" name="access_key" value="cf9bb485-ec22-4ce1-a0ea-141543458430" />
+            <input type="hidden" name="subject" value="New Submission from Portfolio Website" />
+            
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control bg-dark border-secondary text-white" name="name" id="name" placeholder="Your Name" required />
+              <label for="name" class="text-secondary">Your Name</label>
             </div>
-            <div class="mb-3">
-              <input type="email" class="form-control p-3 rounded-4" name="email" id="email" 
-                placeholder="Your Email" required />
+            
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control bg-dark border-secondary text-white" name="email" id="email" placeholder="Your Email" required />
+              <label for="email" class="text-secondary">Your Email</label>
             </div>
-            <div class="mb-3">
-              <input type="text" class="form-control p-3 rounded-4" name="subject" id="subject" 
-                placeholder="Project Subject" required />
+            
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control bg-dark border-secondary text-white" name="subject" id="subject" placeholder="Project Subject" required />
+              <label for="subject" class="text-secondary">Project Subject</label>
             </div>
-            <div class="mb-3">
-              <textarea class="form-control p-3 rounded-4" name="message" placeholder="Tell me about your project" 
-                id="message" rows="4" required></textarea>
+            
+            <div class="form-floating mb-4">
+              <textarea class="form-control bg-dark border-secondary text-white" name="message" id="message" placeholder="Tell me about your project" style="height: 150px" required></textarea>
+              <label for="message" class="text-secondary">Tell me about your project</label>
             </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-dark btn-lg text-uppercase rounded-4">
+            
+            <div class="d-grid shadow-sm">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold">
                 Send Message
               </button>
-              <div id="confirmation-message" style="display:none;" class="alert alert-success mt-3">Your response has been submitted successfully!</div>
             </div>
+            <div id="confirmation-message" style="display:none;" class="alert alert-success mt-3 rounded-pill text-center">Your response has been submitted!</div>
           </form>
-        </div> -->
+        </div>
       </div>
     </div>
   </section>
@@ -592,6 +706,7 @@
             <li><a class="text-decoration-none text-white" href="#about">About</a></li>
             <li><a class="text-decoration-none text-white" href="#skills">Skills</a></li>
             <li><a class="text-decoration-none text-white" href="#portfolio">Portfolio</a></li>
+            <li><a class="text-decoration-none text-white" href="#certificates">Certificates</a></li>
             <li><a class="text-decoration-none text-white" href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -628,19 +743,75 @@
   <script type="text/javascript" src="js/lightbox.min.js"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="js/script.js"></script>
-  
+
+  <!-- AOS & Typed.js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 <script>
-function handleSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+
+  // Initialize Typed.js
+  var typed = new Typed('.typed-text', {
+    strings: ["Full Stack Developer.", "AI & Data Science Enthusiast.", "Creative Problem Solver.", "UI/UX Designer."],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop: true
+  });
+
+async function handleSubmit(event) {
+    event.preventDefault();
     const form = event.target;
     const confirmationMessage = document.getElementById('confirmation-message');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-    // Show confirmation message
-    confirmationMessage.style.display = 'block';
+    submitBtn.innerHTML = "Sending...";
 
-    // Optionally, you can reset the form after submission
-    form.reset();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        });
+        
+        const result = await response.json();
+        
+        if (response.status === 200) {
+            confirmationMessage.style.display = 'block';
+            confirmationMessage.innerText = "Message sent successfully! I'll get back to you soon.";
+            form.reset();
+        } else {
+            confirmationMessage.style.display = 'block';
+            confirmationMessage.classList.remove('alert-success');
+            confirmationMessage.classList.add('alert-danger');
+            confirmationMessage.innerText = "Something went wrong. Please try again later.";
+        }
+    } catch (error) {
+        console.error(error);
+        confirmationMessage.style.display = 'block';
+        confirmationMessage.classList.remove('alert-success');
+        confirmationMessage.classList.add('alert-danger');
+        confirmationMessage.innerText = "Error sending message.";
+    } finally {
+        submitBtn.innerHTML = "Send Message";
+        setTimeout(() => {
+            confirmationMessage.style.display = 'none';
+        }, 5000); // Hide message after 5 seconds
+    }
 }
 </script>
 </body>
