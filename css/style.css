@@ -18,20 +18,34 @@ body {
 
 /* NAVBAR BASE */
 #mainNav {
-  background: rgba(15, 15, 15, 0.65);
-  backdrop-filter: blur(12px);
-  transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+  background: rgba(15, 15, 15, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  margin-top: 15px;
+  width: 92%;
+  left: 4%;
+  right: 4%;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 15px;
 }
 
 /* SCROLLED NAVBAR */
 #mainNav.scrolled {
-  background: rgba(15, 15, 15, 0.95);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  background: rgba(15, 15, 15, 0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  width: 96%;
+  left: 2%;
+  right: 2%;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* HIDDEN NAVBAR (Scroll Down) */
 #mainNav.nav-hidden {
-  transform: translateY(-100%);
+  transform: translateY(-150%);
 }
 
 /* BRAND */
@@ -44,16 +58,17 @@ body {
 /* NAV LINKS */
 .navbar-nav .nav-link {
   position: relative;
-  margin-left: 20px;
+  margin-left: 15px;
   font-weight: 500;
   color: #ffffff;
   transition: color 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 /* HOVER & ACTIVE COLOR */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: #0d6efd;
+  color: var(--bs-primary);
 }
 
 /* UNDERLINE ANIMATION */
@@ -61,11 +76,12 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -4px;
   width: 0;
   height: 2px;
-  background: #0d6efd;
+  background: var(--bs-primary);
   transition: width 0.35s ease;
+  border-radius: 2px;
 }
 
 .navbar-nav .nav-link:hover::after,
@@ -115,6 +131,11 @@ body {
     --bs-light-text-emphasis: #c3c3c3;
     
     --swiper-pagination-color: #F0756C;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body , body  [data-bs-theme=light], body [data-bs-theme=dark] {
@@ -350,6 +371,129 @@ a:hover {
     color: var(--bs-pagination-active-color);
     background-color: var(--bs-pagination-active-bg);
     border-color: var(--bs-pagination-active-border-color);
+}
+
+/* ==========================================================
+   ✨ GLOBAL VANTA & MICRO-ANIMATIONS 
+   ========================================================== */
+body {
+    background-color: transparent !important;
+}
+
+/* Floating Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-icon svg {
+    animation: float 4s ease-in-out infinite;
+}
+
+#skills .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: float 5s ease-in-out infinite;
+    transition: background 0.3s;
+}
+
+#skills .icon:hover {
+    background: rgba(240, 117, 108, 0.1);
+}
+
+/* Hero Background Shapes */
+.hero-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.hero-shape-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--bs-primary);
+    top: -10%;
+    left: -10%;
+    animation: float 7s ease-in-out infinite;
+}
+
+.hero-shape-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--bs-blue);
+    bottom: -20%;
+    right: -10%;
+    animation: float 9s ease-in-out infinite reverse;
+}
+
+/* Magnetic Button Smooth Reset */
+.btn {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s linear !important;
+    will-change: transform;
+}
+.btn:hover {
+    z-index: 10;
+}
+
+/* 3D Card Hover Glow Effects */
+.card, .bg-yellow, .bg-green, .bg-teal {
+    position: relative;
+    transform-style: preserve-3d;
+}
+.card:hover, .bg-yellow:hover, .bg-green:hover, .bg-teal:hover {
+    box-shadow: 0 15px 35px rgba(240, 117, 108, 0.15) !important;
+    z-index: 10;
+}
+.js-tilt-glare {
+    border-radius: inherit;
+}
+
+/* Certificate Redesign */
+.certificate-card {
+    background: rgba(18, 18, 18, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.certificate-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.certificate-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.certificate-card:hover .certificate-img {
+    transform: scale(1.05);
+}
+.certificate-card:hover .certificate-overlay {
+    opacity: 1;
+}
+.certificate-swiper .swiper-pagination-bullet {
+    background: var(--bs-primary);
 }
 
 /* ==========================================================

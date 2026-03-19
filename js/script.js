@@ -71,6 +71,72 @@
         },
       });
 
+      var certSwiper = new Swiper(".certificate-swiper", {
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          600: { slidesPerView: 2 },
+          1000: { slidesPerView: 3 },
+          1400: { slidesPerView: 4 }
+        },
+      });
+
+      // Custom cursor disabled
+
+      // Initialize VanillaTilt for dynamic hover states
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll("#portfolio .card, #about .bg-yellow, #about .bg-green, #about .bg-teal, #certificates .card, #skills .icon"), {
+            max: 12,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.25,
+            scale: 1.05
+        });
+      }
+
+      // Make buttons Magnetic
+      const magneticEls = document.querySelectorAll('.btn');
+      magneticEls.forEach((el) => {
+          el.addEventListener('mousemove', function(e) {
+              const position = el.getBoundingClientRect();
+              const x = e.clientX - position.left - position.width / 2;
+              const y = e.clientY - position.top - position.height / 2;
+              el.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+          });
+
+          el.addEventListener('mouseleave', function(e) {
+              el.style.transform = 'translate(0px, 0px)';
+          });
+      });
+
+      // Interactive WebGL Neural Net Database Background for the Entire Site
+      if (typeof VANTA !== 'undefined') {
+        VANTA.NET({
+          el: "#vanta-site-bg",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0xf0756c,         // Matches Primary Coral
+          backgroundColor: 0x121212, // Matches dark body background
+          points: 12.00,
+          maxDistance: 22.00,
+          spacing: 18.00
+        });
+      }
+
     }); // End of a document ready
 
   // init Isotope

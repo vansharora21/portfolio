@@ -33,6 +33,9 @@
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
 
+<!-- Global Vanta Background -->
+<div id="vanta-site-bg" style="position: fixed; z-index: -10; top: 0; left: 0; width: 100%; height: 100vh;"></div>
+
 <!-- Navbar -->
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
@@ -71,11 +74,15 @@
 </nav>
 
   <!-- Hero Section -->
-  <section id="home">
-    <div class="container">
-      <div class="banner rounded-4 p-5"
-        style="background-image: url(images/converted_keyboard_image.png); background-size: cover ; background-repeat: no-repeat; background-position: center;">
-        <div class="text-content text-white py-5 my-5">
+  <section id="home" class="position-relative overflow-hidden">
+    <!-- Dynamic Background Shapes -->
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+
+    <div class="container position-relative z-1">
+      <div class="banner rounded-4 p-5 position-relative overflow-hidden"
+        style="background-color: rgba(18,18,18,0.3); border: 1px solid rgba(255,255,255,0.05);">
+        <div class="text-content text-white py-5 my-5 position-relative z-1">
           <p class="fs-4">
             <span class="typed-text"></span>
           </p>
@@ -371,129 +378,160 @@
         <p class="lead">Certifications and learning achievements that validate my technical skills.</p>
       </div>
 
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <!-- Next.js -->
-        <div class="col" data-aos="fade-up" data-aos-delay="100">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/3naonbrwaim.png" class="card-img-top" alt="Next.js Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Next.js Development</h5>
-            </div>
+      <!-- Premium Certificates Carousel -->
+      <div class="swiper certificate-swiper position-relative pb-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="swiper-wrapper">
+          
+          <!-- Canva -->
+          <div class="swiper-slide">
+            <a href="images/certificates/canva.png" data-lightbox="certificates" data-title="Canva Design" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/canva.png" class="certificate-img" alt="Canva Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">Canva Design</h5>
+                  <span class="text-white-50 small"><i class="fas fa-search-plus"></i> View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- Canva -->
-        <div class="col" data-aos="fade-up" data-aos-delay="200">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/canva.png" class="card-img-top" alt="Canva Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Canva Design</h5>
-            </div>
+          <!-- C/C++ -->
+          <div class="swiper-slide">
+            <a href="images/certificates/cc++.png" data-lightbox="certificates" data-title="C/C++ Programming" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/cc++.png" class="certificate-img" alt="C/C++ Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">C/C++ Programming</h5>
+                  <span class="text-white-50 small"><i class="fas fa-search-plus"></i> View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- C/C++ -->
-        <div class="col" data-aos="fade-up" data-aos-delay="300">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/cc++.png" class="card-img-top" alt="C/C++ Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">C/C++ Programming</h5>
-            </div>
+          <!-- Chatbot -->
+          <div class="swiper-slide">
+            <a href="images/certificates/chatbot.png" data-lightbox="certificates" data-title="Chatbot Development" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/chatbot.png" class="certificate-img" alt="Chatbot Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">Chatbot Development</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- Chatbot -->
-        <div class="col" data-aos="fade-up" data-aos-delay="400">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/chatbot.png" class="card-img-top" alt="Chatbot Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Chatbot Development</h5>
-            </div>
+          <!-- Frontend -->
+          <div class="swiper-slide">
+             <a href="images/certificates/frontend.png" data-lightbox="certificates" data-title="Frontend Web Development" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/frontend.png" class="certificate-img" alt="Frontend Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">Frontend Web Dev</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- Frontend -->
-        <div class="col" data-aos="fade-up" data-aos-delay="500">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/frontend.png" class="card-img-top" alt="Frontend Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Frontend Web Development</h5>
-            </div>
+          <!-- Full Stack -->
+          <div class="swiper-slide">
+             <a href="images/certificates/full stack.png" data-lightbox="certificates" data-title="Full Stack Web Development" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/full stack.png" class="certificate-img" alt="Full Stack Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">Full Stack Web Dev</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- Full Stack -->
-        <div class="col" data-aos="fade-up" data-aos-delay="600">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/full stack.png" class="card-img-top" alt="Full Stack Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Full Stack Web Development</h5>
-            </div>
+          <!-- Mastery in JS -->
+          <div class="swiper-slide">
+             <a href="images/certificates/mastery in js.png" data-lightbox="certificates" data-title="Mastery in JavaScript" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/mastery in js.png" class="certificate-img" alt="JavaScript Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">Mastery in JS</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- Mastery in JS -->
-        <div class="col" data-aos="fade-up" data-aos-delay="700">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/mastery in js.png" class="card-img-top" alt="JavaScript Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Mastery in JavaScript</h5>
-            </div>
+          <!-- Matplotlib -->
+          <div class="swiper-slide">
+             <a href="images/certificates/matplotlib.png" data-lightbox="certificates" data-title="Matplotlib Library" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/matplotlib.png" class="certificate-img" alt="Matplotlib Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">Matplotlib Library</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- Matplotlib -->
-        <div class="col" data-aos="fade-up" data-aos-delay="800">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/matplotlib.png" class="card-img-top" alt="Matplotlib Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Matplotlib Library</h5>
-            </div>
+          <!-- Python PDF Lib -->
+          <div class="swiper-slide">
+             <a href="images/certificates/python pdf lib.png" data-lightbox="certificates" data-title="Python Libraries" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/python pdf lib.png" class="certificate-img" alt="Python Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">Python Libraries</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- Python PDF Lib -->
-        <div class="col" data-aos="fade-up" data-aos-delay="900">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/python pdf lib.png" class="card-img-top" alt="Python Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">Python Libraries</h5>
-            </div>
+          <!-- React -->
+          <div class="swiper-slide">
+             <a href="images/certificates/react.png" data-lightbox="certificates" data-title="React.js Framework" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/react.png" class="certificate-img" alt="React Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">React.js Framework</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- React -->
-        <div class="col" data-aos="fade-up" data-aos-delay="1000">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/react.png" class="card-img-top" alt="React Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">React.js Framework</h5>
-            </div>
+          <!-- SQL -->
+          <div class="swiper-slide">
+             <a href="images/certificates/sql.png" data-lightbox="certificates" data-title="SQL Database Management" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/sql.png" class="certificate-img" alt="SQL Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">SQL Database Mgmt</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- SQL -->
-        <div class="col" data-aos="fade-up" data-aos-delay="1100">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/sql.png" class="card-img-top" alt="SQL Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">SQL Database Management</h5>
-            </div>
+          <!-- UI/UX -->
+          <div class="swiper-slide">
+             <a href="images/certificates/ui ux.png" data-lightbox="certificates" data-title="UI/UX Design" class="text-decoration-none">
+              <div class="certificate-card rounded-4 overflow-hidden position-relative">
+                <img src="images/certificates/ui ux.png" class="certificate-img" alt="UI/UX Certificate">
+                <div class="certificate-overlay">
+                  <h5 class="text-white fw-bold text-center mb-1">UI/UX Design</h5>
+                  <span class="text-white-50 small">View Certificate</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <!-- UI/UX -->
-        <div class="col" data-aos="fade-up" data-aos-delay="1200">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-dark">
-            <img src="images/certificates/ui ux.png" class="card-img-top" alt="UI/UX Certificate">
-            <div class="card-body">
-              <h5 class="card-title text-center mt-2">UI/UX Design</h5>
-            </div>
-          </div>
         </div>
+        
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-4 position-relative"></div>
       </div>
-    </div>
-  </section>
+    
+</section>
 
   <!-- Testimonials Section
   <section>
@@ -612,7 +650,7 @@
   </section> -->
 
   <!-- Contact Section -->
-  <section id="contact" class="p-5 bg-dark py-5">
+  <section id="contact" class="p-5 py-5">
     <div class="container">
       <div class="row justify-content-center my-5">
         <div class="col-md-5 mb-5 mb-md-0" data-aos="fade-right">
@@ -671,7 +709,7 @@
   </section>
 
   <!-- Footer -->
-  <footer id="footer" class="bg-black text-white py-5">
+  <footer id="footer" class="text-white py-5">
     <div class="container-sm">
       <div class="row g-md-5 my-5">
         <div class="col-md-4">
@@ -744,9 +782,12 @@
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="js/script.js"></script>
 
-  <!-- AOS & Typed.js -->
+  <!-- AOS, Typed.js, Vanilla Tilt, Three.js & Vanta.js -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
 <script>
   // Initialize AOS
