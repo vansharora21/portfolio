@@ -20,13 +20,18 @@ body {
 #mainNav {
   background: rgba(15, 15, 15, 0.65);
   backdrop-filter: blur(12px);
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* SCROLLED NAVBAR */
 #mainNav.scrolled {
-  background: #0f0f0f;
+  background: rgba(15, 15, 15, 0.95);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* HIDDEN NAVBAR (Scroll Down) */
+#mainNav.nav-hidden {
+  transform: translateY(-100%);
 }
 
 /* BRAND */

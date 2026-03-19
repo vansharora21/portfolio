@@ -4,6 +4,39 @@
 
     $(document).ready(function() {
       
+      // Smart Navbar Scroll Listener
+      var lastScrollTop = 0;
+      var navbar = document.getElementById("mainNav");
+      
+      if (navbar) {
+        window.addEventListener("scroll", function() {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          // Add Scrolled dark glass class if not at top
+          if (scrollTop > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+
+          // Auto-hide logic (only triggers after scrolling down 200px)
+          if (scrollTop > 200) {
+            if (scrollTop > lastScrollTop) {
+              // Scrolling down
+              navbar.classList.add("nav-hidden");
+            } else {
+              // Scrolling up
+              navbar.classList.remove("nav-hidden");
+            }
+          } else {
+            // Always show near the top
+            navbar.classList.remove("nav-hidden");
+          }
+          
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For negative scrolling on mobile
+        }, false);
+      }
+
       // masonoary //
 
       initIsotope();
