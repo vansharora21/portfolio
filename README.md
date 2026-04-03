@@ -1,6 +1,6 @@
 # 🚀 Vansh Arora – Portfolio Website
 
-**Live Site**: [https://vansharora21.netlify.app/](https://vansharora21.netlify.app/)
+**Live Site**: [https://vansharora.app/](https://vansharora.app/)
 <h1 align="center">Hi 👋, I'm VANSH ARORA</h1>
 <h3 align="center">WEB DEVELOPER||TECH FREAK || READY TO LEARN</h3>
 

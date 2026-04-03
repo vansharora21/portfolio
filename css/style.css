@@ -211,15 +211,27 @@ body , body  [data-bs-theme=light], body [data-bs-theme=dark] {
 }
 
 .bg-yellow {
-    background-color: var(--bs-yellow) !important;
+    background-color: rgba(28, 28, 28, 0.45) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .bg-green {
-    background-color: var(--bs-green) !important;
+    background-color: rgba(30, 34, 29, 0.45) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .bg-teal {
-    background-color: var(--bs-teal) !important;
+    background-color: rgba(29, 27, 29, 0.45) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-nav a.nav-link:hover {
@@ -389,6 +401,46 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
 }
 
+/* ==========================================================
+   🔲 TRANSLUCENT GLASS BACKGROUNDS FOR ALL SECTIONS
+   ========================================================== */
+#portfolio > .container,
+#certificates > .container,
+#contact > .container,
+#footer > .container-sm {
+    background: rgba(18, 18, 18, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+}
+
+/* Contact form — translucent instead of solid black */
+#contact form {
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Certificate card glass consistency */
+.certificate-card {
+    background: rgba(18, 18, 18, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Portfolio card glass bg */
+#portfolio .card {
+    background: rgba(18, 18, 18, 0.5) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
 /* Floating Animations */
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -515,164 +567,515 @@ body {
   html, body {
     overflow-x: hidden;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.7;
+  }
+
+  body {
+    padding-top: 70px;
   }
 
   section {
-    padding: 50px 15px;
+    padding: 40px 12px;
   }
 
   .container {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 16px;
   }
 
   /* --- Navbar --- */
-  .navbar {
-    padding: 10px 15px;
+  #mainNav {
+    width: 94%;
+    left: 3%;
+    right: 3%;
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+
+  #mainNav.scrolled {
+    width: 96%;
+    left: 2%;
+    right: 2%;
+    margin-top: 5px;
+    border-radius: 20px;
   }
 
   .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  /* Glassmorphism Mobile Menu */
+  .navbar-collapse {
+    background: rgba(15, 15, 15, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    margin-top: 12px;
+    padding: 20px 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   }
 
   .navbar-nav {
     text-align: center;
+    gap: 2px;
   }
 
   .navbar-nav .nav-link {
+    font-size: 1.05rem;
+    padding: 12px 0;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: color 0.3s ease, background 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background: rgba(240, 117, 108, 0.08);
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none; /* Remove underline animation on mobile */
+  }
+
+  .navbar-collapse .btn {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 50px;
+  }
+
+  .navbar-toggler {
+    padding: 4px 8px;
     font-size: 1rem;
-    padding: 10px 0;
   }
 
   .offcanvas {
-    width: 80%;
+    width: 85%;
   }
 
-  /* --- Banner / Hero Section --- */
+  /* --- Hero / Banner Section --- */
+  #home {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
   .banner {
     text-align: center;
-    padding: 60px 15px;
-    background-position: center;
-    background-size: cover;
+    padding: 40px 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .banner .text-content {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .banner .typed-text {
+    font-size: 1rem;
   }
 
   .banner h1,
   .banner .display-1 {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 0%, #F0756C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .banner p {
-    font-size: 0.95rem;
-    margin-top: 10px;
+  .banner p.fs-4 {
+    font-size: 1rem !important;
+  }
+
+  .banner p.fs-5 {
+    font-size: 0.95rem !important;
+    margin-top: 12px;
+    opacity: 0.85;
+  }
+
+  .banner .mt-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px !important;
   }
 
   .banner .btn {
-    display: block;
     width: 100%;
-    margin: 12px 0;
-    padding: 10px;
-    font-size: 1rem;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    margin: 0 !important;
+  }
+
+  /* --- Skills Section --- */
+  #skills {
+    padding: 40px 12px;
+  }
+
+  #skills .rounded-4 {
+    padding: 30px 18px !important;
+    border-radius: 20px !important;
+  }
+
+  #skills .display-4 {
+    font-size: 1.8rem;
+    margin-bottom: 8px !important;
+  }
+
+  #skills .lead {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  #skills .col-lg-4 {
+    margin-bottom: 20px;
+  }
+
+  #skills .d-flex {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px !important;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+  }
+
+  #skills .icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 14px;
+    margin-bottom: 0;
+    animation: none;
+  }
+
+  #skills .icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  #skills h5 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+
+  #skills p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    opacity: 0.8;
+    line-height: 1.5;
   }
 
   /* --- About Section --- */
-  #about .row {
-    flex-direction: column;
-    text-align: center;
+  #about {
+    padding: 30px 12px;
   }
 
-  #about .col-lg-4,
-  #about .col-md-6 {
-    margin-bottom: 25px;
+  #about .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #about .col-lg-4 {
+    margin-bottom: 0;
+  }
+
+  #about .bg-yellow,
+  #about .bg-green,
+  #about .bg-teal {
+    padding: 24px 20px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  #about h3 {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #ffffff 0%, #F0756C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  #about h5 {
+    font-size: 1rem;
+  }
+
+  #about p {
+    font-size: 0.9rem;
+  }
+
+  #about ul {
+    font-size: 0.88rem;
+  }
+
+  #about ul li {
+    margin-bottom: 6px !important;
   }
 
   #about img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
-  }
-
-  /* --- Skills Section --- */
-  #skills .d-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #skills .icon {
-    margin-bottom: 10px;
-  }
-
-  #skills h5 {
-    font-size: 1.2rem;
-  }
-
-  #skills p {
-    font-size: 0.95rem;
+    border-radius: 16px;
   }
 
   /* --- Portfolio Section --- */
-  #portfolio img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+  #portfolio {
+    padding: 40px 12px;
   }
 
-  #portfolio .section-header h2 {
-    font-size: 2rem;
+  #portfolio .section-header {
+    margin-bottom: 16px !important;
+  }
+
+  #portfolio .section-header h2,
+  #portfolio .display-4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px !important;
   }
 
   #portfolio .section-header h4 {
-    font-size: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    opacity: 0.8;
   }
 
-  /* --- Testimonials Section --- */
-  .testimonial-card {
-    margin: 10px 0;
-    padding: 1.5rem;
-    text-align: center;
+  #portfolio #filters {
+    padding: 16px 0 !important;
+    gap: 8px !important;
   }
 
-  .testimonial-card p {
+  #portfolio #filters .btn {
+    font-size: 0.8rem;
+    padding: 8px 18px;
+    border-radius: 50px;
+  }
+
+  #portfolio .portfolio-item {
+    margin-bottom: 16px !important;
+  }
+
+  #portfolio .card {
+    border-radius: 16px !important;
+    overflow: hidden;
+  }
+
+  #portfolio .card img {
+    height: 180px !important;
+    border-radius: 0;
+  }
+
+  #portfolio .card-body {
+    padding: 14px 10px;
+  }
+
+  #portfolio .card-title {
     font-size: 0.95rem;
+  }
+
+  #portfolio .text-center.p-3 .btn {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+    border-radius: 50px;
+  }
+
+  /* --- Certificates Section --- */
+  #certificates {
+    padding: 40px 12px;
+  }
+
+  #certificates .display-4 {
+    font-size: 1.8rem;
+  }
+
+  #certificates .lead {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .certificate-card {
+    border-radius: 16px !important;
+    aspect-ratio: 16/11;
+  }
+
+  .certificate-overlay {
+    opacity: 1; /* Always visible on mobile — no hover */
+    padding: 14px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 30%, transparent 100%);
+  }
+
+  .certificate-overlay h5 {
+    font-size: 0.9rem;
+  }
+
+  .certificate-overlay span {
+    font-size: 0.75rem;
   }
 
   /* --- Contact Section --- */
   #contact {
-    text-align: center;
+    padding: 40px 12px;
   }
 
-  #contact h2 {
-    font-size: 2rem;
-  }
-
-  #contact p,
-  #contact a {
-    font-size: 0.95rem;
-    word-wrap: break-word;
+  #contact .row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   #contact .col-md-5 {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  #contact h6.text-primary {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  #contact h2.display-3 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  #contact .lead {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  #contact .d-flex.flex-column.gap-3 a {
+    font-size: 0.88rem;
+    padding: 12px 16px !important;
+    justify-content: center;
+    border-radius: 50px;
+  }
+
+  #contact .col-md-6 {
+    margin-left: 0;
+  }
+
+  #contact form {
+    padding: 24px 20px !important;
+    border-radius: 20px !important;
+  }
+
+  #contact form .form-control {
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+
+  #contact form label {
+    font-size: 0.85rem;
+  }
+
+  #contact form .btn {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 50px;
   }
 
   /* --- Footer --- */
   footer {
     text-align: center;
-    padding: 40px 15px;
+    padding: 30px 16px 20px;
+  }
+
+  footer .row {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    gap: 24px;
+  }
+
+  footer .col-md-4 {
+    margin-bottom: 0;
+  }
+
+  footer h4 {
+    font-size: 1.2rem;
   }
 
   footer h5 {
     font-size: 1rem;
+    margin-bottom: 10px;
   }
 
-  footer p,
+  footer p {
+    font-size: 0.88rem;
+    opacity: 0.85;
+  }
+
   footer a {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 
-  footer .row > div {
-    margin-bottom: 20px;
+  footer ul {
+    padding-left: 0;
+  }
+
+  footer ul li {
+    margin-bottom: 6px;
+  }
+
+  footer ul li a {
+    transition: color 0.3s ease;
+  }
+
+  footer ul li a:hover {
+    color: var(--bs-primary) !important;
+  }
+
+  /* --- Glass Panel Mobile --- */
+  .glass-panel {
+    border-radius: 20px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* --- Glass Section Containers Mobile --- */
+  #portfolio > .container,
+  #certificates > .container,
+  #contact > .container,
+  #footer > .container-sm {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+
+  /* --- General Typography --- */
+  .display-1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .display-2 {
+    font-size: 2.2rem;
+  }
+
+  .display-3 {
+    font-size: 2rem;
+  }
+
+  .display-4 {
+    font-size: 1.8rem;
+  }
+
+  .display-5 {
+    font-size: 1.4rem;
+  }
+
+  /* --- AOS Animations — Subtler on mobile --- */
+  [data-aos] {
+    transition-duration: 500ms !important;
   }
 
   /* --- Utility --- */
@@ -690,4 +1093,76 @@ body {
     display: none;
   }
 
+  /* Disable VanillaTilt on touch (handled by JS but CSS fallback) */
+  .js-tilt-glare {
+    display: none !important;
+  }
+
+  /* Prevent magnetic button jitter on tap */
+  .btn {
+    transform: none !important;
+  }
+
+  /* Rounded card images */
+  .rounded-4 {
+    border-radius: 20px !important;
+  }
+
+  /* Better scroll padding for anchor links */
+  html {
+    scroll-padding-top: 80px;
+  }
+}
+
+/* ==========================================================
+   📱 EXTRA SMALL SCREENS (≤ 400px)
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+  html, body {
+    font-size: 14px;
+  }
+
+  .banner h1,
+  .banner .display-1 {
+    font-size: 2.4rem;
+  }
+
+  .banner .text-content {
+    padding: 20px 8px !important;
+  }
+
+  #skills .rounded-4 {
+    padding: 20px 12px !important;
+  }
+
+  #about .bg-yellow,
+  #about .bg-green,
+  #about .bg-teal {
+    padding: 18px 14px !important;
+  }
+
+  #contact form {
+    padding: 18px 14px !important;
+  }
+
+  #contact h2.display-3 {
+    font-size: 1.7rem;
+  }
+
+  #portfolio .card img {
+    height: 160px !important;
+  }
+
+  .navbar-collapse {
+    padding: 16px 8px 12px;
+  }
+
+  #portfolio > .container,
+  #certificates > .container,
+  #contact > .container,
+  #footer > .container-sm {
+    padding: 18px 12px;
+  }
 }
